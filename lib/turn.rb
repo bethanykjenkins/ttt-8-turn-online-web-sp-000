@@ -14,3 +14,11 @@ def move(board, index, player = "X")
    board[index] = player
 end
 
+def valid_move?(board, index)
+ if position_taken?(board,index) != true && index.between?(0, 8)
+    true 
+  else
+    false
+  end
+end
+
